@@ -25,8 +25,8 @@ var array2=[["Α.Ο Ξαθνης","ΑΝΑΤΟΛΙΚΗ ΜΑΚΕΔΟΝΙΑ&ΘΡΑ�
        }
 
        table2 = document.getElementById("gram");
-       //if(localStorage.tableData==undefined){localStorage.tableData=table2.innerHTML};
-       //table2.innerHTML = localStorage.tableData;     
+       if(localStorage.tableData==undefined){localStorage.tableData=table2.innerHTML};
+       table2.innerHTML = localStorage.tableData;     
  function addrowtable() {
   var len = array2.length
   var tableg = document.getElementById("gram");
