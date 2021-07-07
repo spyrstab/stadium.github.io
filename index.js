@@ -48,7 +48,7 @@ cell6.innerHTML = document.querySelector('#newCellSixeText').value;
 cell7.innerHTML = document.querySelector('#newCellSevenText').value;
 cell8.innerHTML = document.querySelector('#newCellEightText').value;
 
-localStorage.tableData=table.innerHTML; 
+localStorage.tableData=table2.innerHTML; 
 }
 $(function(){
     $('#btn_submit').click(function(){
