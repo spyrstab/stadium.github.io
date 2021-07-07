@@ -1,0 +1,186 @@
+body {
+   height: 100%;
+   margin: 0;
+   font-family: "Open sans",Arial, Helvetica, sans-serif;
+   background-image: linear-gradient(#ffffff80, #ffffff80), url("Stadium.jpg");
+   background-position: center;
+   background-repeat: repeat; 
+   background-size: cover;
+   position: static;
+ }
+
+ th, td {
+    margin-left: center;
+    margin-right: center;
+     border: 1px solid black;
+     border-collapse: collapse;
+     padding :20px;
+
+}
+
+tr:hover{background:black;
+	color :white;
+    
+}
+th{background: burlywood;}
+ 
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+.text {
+ font-family: Arial black;
+
+}
+.arc text {
+  font: 15px sans-serif;
+  text-anchor: middle;
+  
+
+}
+
+.arc path {
+  stroke: #fff;
+}
+.pie1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 400px;
+  margin-left: 800px;
+}
+  .text{
+    margin-top:0px;
+    margin-bottom: 10px;
+    margin-right: 500px;
+    margin-left: 80px;}
+    
+    h2{
+      color: black;
+      font-family: Arial;
+      font-size:30px;
+      text-align:center;
+      }
+.map{
+  height :auto;
+  width : auto;
+
+}
+.from3
+{
+ align-items: right;
+
+}
+@media only screen and (min-width: 350px) {
+  .hero-text{width: 100%;}
+  .table1 {margin: auto; 
+    width: auto;}
+  .table2 {margin: 30%; 
+    width: auto;}
+  
+  .header {
+    background: #d6556a;  
+   text-align: center;
+    margin: auto; 
+    width: auto;
+  }
+  .form{width: 100%;}
+  .pie1{	 margin: auto; 
+    width: auto;
+  }
+}
+.map{
+      margin: auto; 
+    width: auto;
+}
+.text{
+  margin: auto; 
+width: auto;
+}
+@media only screen and (min-width: 700px) {
+  
+  .hero-text{width: 100%;}
+  .table1 {margin: auto; 
+    width: auto;}
+  .table2 {margin: auto; 
+    width: auto;}
+  
+  header {
+    background: #d6556a;  
+   text-align: center;
+    margin: auto; 
+    width: auto;
+  }
+  .form{width: 100%;}
+  .pie1{	 margin: auto; 
+    width: auto;
+  }
+}
+.map{
+      margin: auto; 
+    width: auto;
+}
+.text{
+  margin: auto; 
+width: auto;
+}

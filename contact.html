@@ -1,0 +1,91 @@
+
+
+
+<head>
+
+ 
+    <title> ΠΟΔΟΣΦΑΙΡΙΚΑ ΓΗΠΕΔΑ</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="web, page, html,css">
+  <meta name="author" content="Spiros Stamplolidis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="icon" href="./icon.png" type="image/x-icon">
+
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  
+</head>
+
+<header>
+
+<div class="container">
+ 
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+</header>
+<body>
+    <h2><b>ΠΟΔΟΣΦΑΙΡΙΚΑ ΓΗΠΕΔΑ</b></h2>
+  
+<br></br>
+<br></br>
+
+    <div class= "table1" > 
+        <table id="info" class="t01" align="right">
+            <tr>
+                <th>ΟΝΟΜΑ</th>
+                <th>ΔΙΕΥΘΗΝΣΗ</th>
+                <th>ΤΗΛΕΓΩΝΟ</th>
+              
+              </tr>
+        </table>
+        <br></br>
+        <br></br>
+     
+
+<div class= "map" align="center">
+    <p1 >
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=148zDuLHAXDR2cK6ShH9ky7nEGaoSwjnW" width="640" height="480"></iframe>
+    </p1>
+</div>
+</body>
+<script>
+    var table1 = document.getElementById("info"), sumVal = 0;
+var array1=[["Α.Ο Ξαθνης","ΕΜΜΑΝΟΥΗΛ 21","2305698"],
+["Σταδιο Κασσανδιας","ΚΑΡΑΜΠΟΥΡΝΙΟΤΗ 52","2015876"],
+["Ανθη Καραγιαννη","ΧΑΡΙΛΑΟΥ ΤΡΙΚΟΥΠΗ 15","2140365"],
+["Αγίου Παύλου","ΚΟΛΟΚΟΤΡΩΝΗ 52","8524625"],
+["Αννα Βερούλη ","ΕΡΑΤΟΣΘΕΝΟΥΣ 154","2310258"],
+["Απόλλων Καλαμαριας","ΑΓΙΟΥ ΓΕΩΡΓΙΟΥ 12","2130254"],
+["Καυτατζογλιο","ΑΓΙΟΥ ΔΗΜΗΤΡΙΟΥ","2310569"],
+["Κλεάνθης Βικελίδης","ΠΑΠΑΝΑΣΤΑΣΙΟΥ 54","20156987"],
+["Περασματος"," ΘΡΑΚΗΣ 112","2013256"],
+["Τουμπας","ΑΝΑΤΟΛΙΚΗΣ ΘΡΑΚΗΣ 52","2310236"],
+["Σταδιο Κοζανη","ΠΑΠΑΝΙΚΟΛΑΟΥ 32","265984"]],
+table1 = document.getElementById("info");
+for(var i = 0; i < array1.length; i++)
+{
+   var newRow = table1.insertRow(table1.length);
+   for(var j = 0; j < array1[i].length; j++)
+   {
+       var cell = newRow.insertCell(j);
+       cell.innerHTML = array1[i][j];
+   }
+}
+</script>
+</body>
+</html>

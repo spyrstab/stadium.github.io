@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ 
+    <title> ΠΟΔΟΣΦΑΙΡΙΚΑ ΓΗΠΕΔΑ</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="web, page, html,css">
+  <meta name="author" content="Spiros Stamplolidis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="icon" href="./icon.png" type="image/x-icon">
+
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  
+</head>
+
+<header>
+
+<div class="container">
+ 
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<body>
+    <h2><b>ΔΗΜΟΣΙΑ & ΙΔΙΩΤΙΚΑ ΓΗΠΕΔΑ ΜΑΚΕΔΟΝΙΑΣ</b></h2>
+    <br></br>
+    
+    <table id="sum" class="t03" align="left">
+    <tr>
+      <th>ΠΕΡΙΦΕΡΙΑ</th>
+      <th>ΣΥΝΟΛΟ ΓΗΠΕΔΩΝ</th>
+      <th>ΔΗΜΟΣΙΑ</th>
+      <th>ΙΔΙΩΤΙΚΑ</th>
+    </tr>
+  
+  </table>
+  <br></br>
+  
+   
+    <div class= "pie1">
+            <svg width="500" height="400" > </svg>
+        </div>
+        
+         
+            <div class= "text" align="left">
+                
+                <span id="ΣΥΝΟΛΟ ΓΗΠΕΔΩΝ"
+                ></span>
+                  <span id="ΔΗΜΟΣΙΑ"
+                ></span>
+                  <td><span id="ΙΔΙΩΤΙΚΑ"
+                     ></span></td>
+          
+            </div>
+</body>
+
+
+  <script>
+      var array3=[["ΑΝ.ΜΑΚΕΔΟΝΙΑΣ&ΘΡΑΚΗΣ","11","10","1"],
+["ΚΕΝΤΡΙΚΗ ΜΑΚΕΔΟΝΙΑ","17","13","4"],
+["ΔΥΤΙΚΗ ΜΑΚΕΔΟΝΙΑ","6","6","0"]],
+table3 = document.getElementById("sum");
+for(var i = 0; i < array3.length; i++)
+       {
+           var newRow = table3.insertRow(table3.length);
+           for(var j = 0; j < array3[i].length; j++)
+           {
+               var cell = newRow.insertCell(j);
+               cell.innerHTML = array3[i][j];
+           }
+       }
+       var tablsum = document.getElementById("sum"), sumVal = 0;
+
+for(var i = 1; i < table3.rows.length; i++)
+{
+sumVal = sumVal + parseInt(table3.rows[i].cells[2].innerHTML);
+}
+
+document.getElementById("ΔΗΜΟΣΙΑ").innerHTML = "ΔΗΜΟΣΙΑ = " + sumVal;
+console.log(sumVal);
+var tablsum = document.getElementById("sum"), sumVal = 0;
+for(var i = 1; i < table3.rows.length; i++)
+{
+sumVal = sumVal + parseInt(table3.rows[i].cells[3].innerHTML);
+}
+
+document.getElementById("ΙΔΙΩΤΙΚΑ").innerHTML = "ΙΔΙΩΤΙΚΑ = " + sumVal;
+console.log(sumVal);
+for(var i = 1; i < table3.rows.length; i++)
+{
+sumVal = sumVal + parseInt(table3.rows[i].cells[1].innerHTML);
+}
+
+document.getElementById("ΣΥΝΟΛΟ ΓΗΠΕΔΩΝ").innerHTML = "ΣΥΝΟΛΟ ΓΗΠΕΔΩΝ= " + sumVal;
+console.log(sumVal);
+
+
+
+var data = [39,29 ,5];
+          
+var svg = d3.select("svg"),
+    width = svg.attr("width"),
+    height = svg.attr("height"),
+    radius = Math.min(width, height) / 2,
+    g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+var color = d3.scaleOrdinal(['#4daf4a','#377eb8','#ff7f00']);
+
+// Generate the pie
+var pie = d3.pie();
+
+// Generate the arcs
+var arc = d3.arc()
+            .innerRadius(0)
+            .outerRadius(radius);
+
+//Generate groups
+var arcs = g.selectAll("arc")
+            .data(pie(data))
+            .enter()
+            .append("g")
+            .attr("class", "arc")
+
+//Draw arc paths
+arcs.append("path")
+    .attr("fill", function(d, i) {
+        return color(i);
+    })
+    .attr("d", arc);
+
+    var label = d3.arc()
+            .outerRadius(radius)
+            .innerRadius(radius - 80);
+
+            arcs.append("text")
+    .attr("transform", function(d) { 
+            return "translate(" + label.centroid(d) + ")"; 
+    })
+    .text(function(d) { return d.data; });
+  </script>
+
+</html>

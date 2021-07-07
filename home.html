@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <title> ΠΟΔΟΣΦΑΙΡΙΚΑ ΓΗΠΕΔΑ</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="web, page, html,css">
+  <meta name="author" content="Spiros Stamplolidis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="manifest" href="/tennis/manifest.json">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="icon" href="./icon.png" type="image/x-icon">
+  
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+  
+</head>
+
+<header>
+
+<div class="container">
+ 
+
+  <nav>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="map.html">Map</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+
+<body>
+  
+  <div class= "table2">
+   
+    <table id="gram" class="t02" align="center">
+      <caption><h2><b>ΠΟΔΟΣΦΑΙΡΙΚΑ ΓΗΠΕΔΑ</b></h2><br><button onclick="hideOrShow()">Απόκρυψη ΣτηλώνΕμφάνιση Στηλών</button>
+        <select id="colhide">
+          <option value="0" selected>Απόκρυψη μιας στήλης</option>
+          <option value="1" >Απόκρυψη ONOMA</option>
+          <option value="2" >Απόκρυψη ΠΕΡΙΦΕΡEΙΑ</option>
+          <option value="3" >Απόκρυψη ΝΟΜΟΣ</option>
+          <option value="4" >Απόκρυψη ΠΛΗΘΥΣΜΟΣ</option>
+          <option value="5" >Απόκρυψη ΙΔΙΟΚΤΗΣΙΑΚΟ ΚΑΘΕΣΤΟΣ</option>
+          <option value="6" >Απόκρυψη ΕΤΟΣ ΚΑΤΑΣΚΕΥΗΣ</option>
+          <option value="7" >Απόκρυψη ΧΩΡΗΤΙΚΟΤΗΤΑ</option>
+          <option value="8" >Απόκρυψη ΚΑΤΗΓΟΡΙΑ</option>
+          <option value="9" >Επαναφορά</option>
+          </select></br></caption>
+
+          <tr>
+            <th onclick="sortTable(0)">ONOMA</th>
+            <th onclick="sortTable(1)">ΠΕΡΙΦΕΡEΙΑ</th>
+            <th onclick="sortTable(2)">ΝΟΜΟΣ</th>
+            <th onclick="sortTable(3)">ΠΛΗΘΥΣΜΟΣ</th>
+            <th onclick="sortTable(4)">ΙΔΙΟΚΤΗΣΙΑΚΟ ΚΑΘΕΣΤΟΣ</th>
+            <th onclick="sortTable(5)">ΕΤΟΣ ΚΑΤΑΣΚΕΥΗΣ</th>
+            <th onclick="sortTable(6)">ΧΩΡΗΤΙΚΟΤΗΤΑ</th>
+            <th onclick="sortTable(7)">ΚΑΤΗΓΟΡΙΑ</th>
+          </tr>
+          
+        </table>
+        <div class="form">
+<input type="text" id="newCellOneText" placeholder="ONOMA"/>
+<input type="text" id="newCellTwoText" placeholder="ΠΕΡΙΦΕΡΕΙΑ"/>
+<input type="text" id="newCellThreeText" placeholder="ΝΟΜΟΣ"/>
+<input type="text" id="newCellFourText" placeholder="ΠΛΗΘΥΣΜΟΣ"/>
+<input type="text" id="newCellFiveText" placeholder="ΙΔΙΟΚΤΗΣΙΚΟ ΚΑΘΕΣΤΟΣ"/>
+<input type="text" id="newCellSixeText" placeholder="ΕΤΟΣ ΚΑΤΑΣΚΕΥΗΣ"/>
+<input type="text" id="newCellSevenText" placeholder="ΧΩΡΗΤΙΚΟΤΗΤΑ"/>
+<input type="text" id="newCellEightText" placeholder=" ΚΑΤΗΓΟΡΙΑ"/>
+ <button type="reset" id="btn_reset" style="display: none;"></button>
+ <button type="button" id="btn_submit" onclick="addrowtable()">Πρόσθεσε νέα γραμμή</button>
+</div>
+</div>
+
+  
+    <br></br>
+
+ 
+
+</body>
+<script src="index.js"></script>
+</html>

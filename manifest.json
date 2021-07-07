@@ -1,0 +1,18 @@
+{    "name": "ΣΤΑΔΙΑ ΤΗΣ ΜΑΚΕΔOΝΙΑΣ",
+    "short_name":"ΠΟΔΟΣΦΑΙΡΙΚΑ ΓΗΠΕΔΑ",
+    "start_url": "./index.html",
+    "background_color":"#99FFCC",
+    "theme_color": "#99FFCC",
+    "orientation": "portrait-primary",
+    "display": "standalone",
+    "icons":[
+        {
+            "src": "./icon.png",
+            "type":"image/png",
+            "sizes": "405x405"
+
+        }
+
+    
+    ]
+}
